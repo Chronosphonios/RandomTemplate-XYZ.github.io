@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguas Termales de Tapia</title>
+    <style>
+        /* Definimos la animación de gradiente */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Aplicamos la animación al fondo del body */
+        body {
+            background: linear-gradient(270deg, #000000, #1a1a1a, #005f73, #94d2bd, #0a9396);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Animación y estilo para los títulos */
+        h1, h2 {
+            background: linear-gradient(270deg, #d3f1fc, #00ccff, #b3e4ff, #e6f9ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 5s ease infinite;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo general de los cuadros */
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 3px solid #62e0ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 204, 255, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            width: auto;
+        }
+
+        /* Efecto de hover para los cuadros */
+        .content-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(0, 204, 255, 1);
+        }
+
+        /* Estilo de enlaces del menú de navegación */
+        a {
+            color: white;
+            font-size: 24px; /* Aumentamos el tamaño de la fuente */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Añadimos una transición suave para los cambios */
+        }
+
+        /* Efecto hover para los enlaces del menú de navegación */
+        a:hover {
+            color: #62e0ff; /* Cambia el texto a celeste cielo */
+            background-color: black; /* Fondo negro */
+            border: 2px solid white; /* Contorno blanco */
+            padding: 12px 18px; /* Ajuste para el padding al cambiar el borde */
+            border-radius: 8px; /* Un poco de curvatura a la caja */
+        }
+
+        /* Estilo de la galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px; /* Espacio entre imágenes */
+            justify-items: center; /* Centra las imágenes */
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0px 0px 10px rgba(0, 204, 255, 0.7); /* Sombra para las imágenes */
+            transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Efecto de aumento en hover */
+        }
+
+        /* Encabezado y pie de página */
+        .header, .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgb(134, 251, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con logo y título -->
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <img src="Recursos de Imagen/LogoX-001.png" alt="Logo Aguas Termales de Tapia" style="height: 75px;">
+        <h1>Aguas Termales de Tapia</h1>
+        <audio id="audioPlayer" src="Dreiton.mp3"></audio>
+        <button onclick="document.getElementById('audioPlayer').play();" style="background-color: #62e0ff; border: none; padding: 10px; cursor: pointer;">C1418 - Dreiton</button>
+    </div>
+
+    <!-- Menú de navegación -->
+    <div style="display: flex; justify-content: space-around;" class="header">
+        <a href="index.html">Home</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="galeria.html">Galería</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div style="padding: 20px;">
+        <div class="container">
+            <h2 style="font-size: 24px; background: linear-gradient(270deg, #d3f1fc, #72e3ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientAnimation 3s ease infinite; text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);">Galería de Imágenes</h2>
+            <p>Descubre la belleza de nuestras instalaciones y la experiencia única que ofrecemos en Aguas Termales de Tapia.</p>
+        </div>
+
+        <!-- Galería de imágenes en forma de collage -->
+        <div class="gallery">
+            <img src="Recursos de Imagen/A-Long-way.jpeg" alt="Imagen 1">
+            <img src="Recursos de Imagen/Act-001.jpeg" alt="Imagen 2">
+            <img src="Recursos de Imagen/Re-espectrum.jpeg" alt="Imagen 3">
+            <img src="Recursos de Imagen/Ruta de acceso.jpg" alt="Imagen 4">
+            <img src="Recursos de Imagen/Propiedades curativas-fotoAlegre.jpeg" alt="Imagen 5">
+            <img src="Recursos de Imagen/ImagenAguasTempl1.jpg" alt="Imagen 6">
+            <img src="Recursos de Imagen/ImagenA-Temple2.jpg" alt="Imagen 7">
+            <img src="Recursos de Imagen/Imagen dentro de instalaciones.jpeg" alt="Imagen 8">
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        <p>&copy; 2024 Aguas Termales de Tapia Arequipa - Libre de copyright.</p>
+    </div>
+
+</body>
+</html>

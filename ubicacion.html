@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguas Termales de Tapia</title>
+    <style>
+        /* Definimos la animación de gradiente */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Aplicamos la animación al fondo del body */
+        body {
+            background: linear-gradient(270deg, #000000, #1a1a1a, #005f73, #94d2bd, #0a9396);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Animación y estilo para los títulos */
+        h1, h2 {
+            background: linear-gradient(270deg, #d3f1fc, #00ccff, #b3e4ff, #e6f9ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 5s ease infinite;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo general de los cuadros */
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 3px solid #62e0ff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 204, 255, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto de hover para los cuadros */
+        .content-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(0, 204, 255, 1);
+        }
+
+        /* Estilo de enlaces del menú de navegación */
+        a {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto hover para los enlaces del menú de navegación */
+        a:hover {
+            color: #62e0ff;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 8px;
+        }
+
+        /* Encabezado y pie de página */
+        .header, .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgb(134, 251, 255);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Justificación del texto en el contenido principal */
+        .text-justified {
+            text-align: justify;
+        }
+
+        /* Estilo de la imagen de ubicación */
+        .location-image {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con logo y título -->
+    <div class="header">
+        <img src="Recursos de Imagen/LogoX-001.png" alt="Logo Aguas Termales de Tapia" style="height: 75px;">
+        <h1>Aguas Termales de Tapia</h1>
+        <audio id="audioPlayer" src="Dreiton.mp3"></audio>
+        <button onclick="document.getElementById('audioPlayer').play();" style="background-color: #62e0ff; border: none; padding: 10px; cursor: pointer;">C1418 - Dreiton</button>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav style="background-color: rgba(0, 0, 0, 0.8);">
+        <div style="display: flex; justify-content: space-around;">
+            <a href="index.html">Home</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="galeria.html">Galería</a>
+        </div>
+    </nav>
+
+<!-- Contenido principal -->
+<div style="padding: 20px;">
+    <div class="content-box" style="width: 80%; max-width: 600px; margin: auto;">
+        <h2>Ubicación de Aguas Termales de Tapia</h2>
+        <p>Las Aguas Termales de Tapia están ubicadas en un entorno natural privilegiado, rodeadas de montañas majestuosas y una vegetación exuberante que invita a la tranquilidad y al descanso. Este lugar es un verdadero oasis donde podrás disfrutar de la serenidad y el contacto directo con la naturaleza.</p>
+        <p>Para llegar, sigue las siguientes indicaciones:</p>
+        <ul>
+            <li>Desde Arequipa, toma la carretera hacia el sur, disfrutando de los impresionantes paisajes que adornan el camino.</li>
+            <li>Sigue las señales hacia el área de Tapia, donde la belleza natural te dará la bienvenida.</li>
+            <li>Una vez llegues a Tapia, encontrarás nuestras instalaciones señalizadas, listas para ofrecerte una experiencia de relax inigualable.</li>
+        </ul>
+        <p>Te aseguramos que cada momento aquí será inolvidable, donde el bienestar y la paz son nuestras prioridades. ¡Esperamos verte pronto y compartir contigo la magia de este lugar!</p>
+    </div>
+</div>
+
+
+        <!-- Imagen de ubicación -->
+        <img src="Recursos de Imagen/TapiaLocation-prev..jpeg" alt="Ubicación de Aguas Termales de Tapia" class="location-image">
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        <p>&copy; 2024 Aguas Termales de Tapia Arequipa - Libre de copyright.</p>
+    </div>
+
+</body>
+</html>
+

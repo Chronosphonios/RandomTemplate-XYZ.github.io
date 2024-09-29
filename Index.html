@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aguas Termales de Tapia</title>
+    <style>
+        /* Definimos la animación de gradiente */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Aplicamos la animación al fondo del body */
+        body {
+            background: linear-gradient(270deg, #000000, #1a1a1a, #005f73, #94d2bd, #0a9396);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Animación y estilo para los títulos */
+        h1, h2 {
+            background: linear-gradient(270deg, #d3f1fc, #00ccff, #b3e4ff, #e6f9ff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 5s ease infinite;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo general de los cuadros */
+        .content-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 3px solid #62e0ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 204, 255, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            width: auto;
+        }
+
+        /* Efecto de hover para los cuadros */
+        .content-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(0, 204, 255, 1);
+        }
+
+        /* Estilo de enlaces del menú de navegación */
+        a {
+            color: white;
+            font-size: 24px; /* Aumentamos el tamaño de la fuente */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: all 0.3s ease; /* Añadimos una transición suave para los cambios */
+        }
+
+        /* Efecto hover para los enlaces del menú de navegación */
+        a:hover {
+            color: #62e0ff; /* Cambia el texto a celeste cielo */
+            background-color: black; /* Fondo negro */
+            border: 2px solid white; /* Contorno blanco */
+            padding: 12px 18px; /* Ajuste para el padding al cambiar el borde */
+            border-radius: 8px; /* Un poco de curvatura a la caja */
+        }
+
+        /* Encabezado y pie de página */
+        .header, .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgb(134, 251, 255);
+        }
+
+        /* Limpieza de flotación */
+        .clear {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con logo y título -->
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <img src="Recursos de Imagen/LogoX-001.png" alt="Logo Aguas Termales de Tapia" style="height: 75px;">
+        <h1>Aguas Termales de Tapia</h1>
+        <audio id="audioPlayer" src="Dreiton.mp3"></audio>
+        <button onclick="document.getElementById('audioPlayer').play();" style="background-color: #62e0ff; border: none; padding: 10px; cursor: pointer;">C1418 - Dreiton</button>
+    </div>
+
+    <!-- Menú de navegación -->
+    <div style="display: flex; justify-content: space-around;" class="header">
+        <a href="index.html">Home</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="galeria.html">Galería</a>
+    </div>
+
+  <!-- Contenido principal -->
+<div style="padding: 20px;">
+    <!-- Primer cuadro, alineado a la izquierda con imagen a la derecha -->
+    <div class="content-box" style="width: 45%; float: left; margin-right: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px;">Descripción</h2>
+        <div style="display: flex;">
+            <p style="flex: 1; text-align: justify;">Las Aguas Termales de Tapia están situadas a unos 40 kilómetros de la ciudad de Arequipa, en el distrito de Tapia. Este lugar es famoso por sus manantiales de agua caliente que brotan del subsuelo, creando piscinas naturales donde los visitantes pueden relajarse y disfrutar de un baño terapéutico.</p>
+            <img src="Recursos de Imagen/ImagenAguasTempl1.jpg" alt="Imagen de las Aguas Termales" style="flex: 0; width: 23%; margin-left: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+        </div>
+    </div>
+
+    <!-- Segundo cuadro, alineado a la derecha con imagen a la izquierda -->
+    <div class="content-box" style="width: 45%; float: right; margin-left: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px; text-align: right;">Propiedades Curativas</h2>
+        <div style="display: flex;">
+            <img src="Recursos de Imagen/Propiedades curativas-fotoAlegre.jpeg" alt="Imagen de propiedades curativas" style="flex: 0; width: 30%; margin-right: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+            <ul style="flex: 1; list-style-type: disc; text-align: justify;">
+                <li><strong>Alivio del Estrés:</strong> Sumergirse en aguas cálidas ayuda a relajar la mente y el cuerpo, reduciendo la tensión acumulada.</li>
+                <li><strong>Mejora de la Circulación:</strong> Las altas temperaturas fomentan la vasodilatación, lo que puede mejorar la circulación sanguínea.</li>
+                <li><strong>Beneficios para la Piel:</strong> Los minerales presentes en el agua pueden ayudar a tratar diversas afecciones cutáneas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Limpieza de flotación -->
+    <div style="clear: both;"></div>
+
+    <!-- Tercer cuadro, alineado a la izquierda con imagen a la derecha -->
+    <div class="content-box" style="width: 45%; float: left; margin-right: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px;">Entorno Natural</h2>
+        <div style="display: flex;">
+            <p style="flex: 1; text-align: justify;">El paisaje que rodea las Aguas Termales de Tapia es impresionante. La zona está enmarcada por montañas y una vegetación diversa, lo que proporciona un ambiente tranquilo y sereno. Es un lugar ideal para desconectar y disfrutar de la naturaleza.</p>
+            <img src="Recursos de Imagen/Imagen dentro de instalaciones.jpeg" alt="Imagen del entorno natural" style="flex: 0; width: 15%; margin-left: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+        </div>
+    </div>
+
+    <!-- Cuarto cuadro, alineado a la derecha con imagen a la izquierda -->
+    <div class="content-box" style="width: 45%; float: right; margin-left: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px; text-align: right;">
+            <a href="servicios.html" style="color: inherit; text-decoration: none;">Actividades y Servicios</a>
+        </h2>
+        <div style="display: flex;">
+            <img src="Recursos de Imagen/Act-001.jpeg" alt="Imagen de actividades y servicios" style="flex: 0; width: 20%; margin-right: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+            <ul style="flex: 1; list-style-type: disc; text-align: justify;">
+                <li><strong>Piscinas Termales:</strong> Varias piscinas de diferentes temperaturas.</li>
+                <li><strong>Masajes y Tratamientos:</strong> Opciones de spa que combinan el uso de las aguas termales con tratamientos relajantes.</li>
+                <li><strong>Caminatas:</strong> Rutas para explorar el entorno natural.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quinto cuadro, alineado a la izquierda con imagen a la derecha -->
+    <div class="content-box" style="width: 45%; float: left; margin-right: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px;">Acceso</h2>
+        <div style="display: flex;">
+            <p style="flex: 1; text-align: justify;">El acceso a las Aguas Termales de Tapia desde Arequipa es relativamente sencillo, aunque implica recorrer una trocha que puede requerir precauciones. Puedes llegar en vehículo privado, lo que te da la flexibilidad de explorar la zona a tu ritmo, o en transporte público, que también es una opción viable. Es recomendable verificar las condiciones del camino antes de partir, ya que pueden variar según el clima y el mantenimiento.
+                 Si decides optar por el transporte público, asegúrate de consultar los horarios y las rutas disponibles para planificar tu visita de manera efectiva. Prepararte adecuadamente te permitirá disfrutar de esta hermosa experiencia natural sin contratiempos.</p>
+            <img src="Recursos de Imagen/Ruta de acceso.jpg" alt="Imagen de acceso" style="flex: 0; width: 10%; margin-left: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+        </div>
+    </div>
+
+    <!-- Limpieza de flotación final -->
+    <div style="clear: both;"></div>
+
+    <!-- Sexto cuadro, resumen final alineado a la derecha con imagen a la izquierda -->
+    <div class="content-box" style="width: 45%; float: right; margin-left: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+        <h2 style="font-size: 24px; text-align: right;">Resumen</h2>
+        <div style="display: flex;">
+            <img src="Recursos de Imagen/A-Long-way.jpeg" alt="Imagen de resumen" style="flex: 0; width: 20%; margin-right: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+            <p style="flex: 1; text-align: justify;">En resumen, las Aguas Termales de Tapia en Arequipa son un destino ideal para quienes buscan relajarse y beneficiarse de las propiedades curativas de sus aguas, todo en un entorno natural espectacular.</p>
+        </div>
+    </div>
+
+    <!-- Limpieza de flotación final -->
+    <div style="clear: both;"></div>
+
+<!-- Sexto cuadro, alineado a la izquierda con imagen a la derecha -->
+<div class="content-box" style="width: 45%; float: left; margin-right: 5%; background-color: rgba(0, 0, 0, 0.7); border: 3px solid #62e0ff; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+    <h2 style="font-size: 24px;">Acerca de Nosotros</h2>
+    <div style="display: flex;">
+        <p style="flex: 1; text-align: justify;">
+            Esta página web ha sido desarrollada por los estudiantes de cuarto grado de secundaria de la I.E. Life School con el objetivo de fomentar el aprendizaje en el ámbito digital. Participamos en una competencia de desarrollo digital, por lo que consideramos que esta página es de uso libre y no está sujeta a derechos de autor. ¡Siéntase libre de utilizar y modificar el contenido según lo desee! Agradecemos la música:   <a href="https://www.youtube.com/watch?v=IJJo3AUF5e8">Dreiton</a>   , del autor C14-18. ¡Famosa y reconocida entre la comunidad OG de MC, les invito a escuchar por su cuenta el explendido Soundtrack !
+        </p>
+        <img src="Recursos de Imagen/Life-Logo.jpeg" alt="Imagen de acceso" style="flex: 0; width: 20%; margin-left: 10px; border: 5px solid black; border-radius: 10px; box-shadow: 0 0 10px #62e0ff;">
+    </div>
+</div>
+
+    
+        <!-- Limpieza de flotación final -->
+        <div style="clear: both;"></div>
+
+
+</div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        <p>&copy; 2024 Aguas Termales de Tapia Arequipa - Libre de copyright !.</p>
+    </div>
+
+</body>
+</html>
+
